@@ -199,7 +199,7 @@ abbr ùpstr public String () {<CR>}<Left><S-Left><Left><Left><Left><C-R>=Eatchar
 
 
 "---------------------------------------
-"-----------CONTROL FLOW----------------
+"-----------FLOW CONTROL----------------
 
 "-----------TEST------------------------
 abbr ùif if () {<CR>}<Up><Right><Right><Right><C-R>=Eatchar('\s')<CR>
@@ -210,15 +210,20 @@ abbr ùsw switch () {<CR>}<Left><S-Left><Left><Left><C-R>=Eatchar('\s')<CR>
 "-----------LOOP-------------------------
 abbr ùwh while () {<CR>}<Left><S-Left><Left><Left><C-R>=Eatchar('\s')<CR>
 
+abbr ùfor for () {<CR>}<Left><S-Left><Left><Left><C-R>=Eatchar('\s')<CR>
+
 abbr ùfo0 for (int i=0 ; i< ; ++i) {<CR>}<Left><S-Left><Left><Left><Left><Left><Left><Left><Left><Left><C-R>=Eatchar('\s')<CR>
 
-abbr ùfor for () {<CR>}<Left><S-Left><Left><Left><C-R>=Eatchar('\s')<CR>
+abbr ùfo1 for (int i=1 ; i<= ; ++i) {<CR>}<Left><S-Left><Left><Left><Left><Left><Left><Left><Left><Left><C-R>=Eatchar('\s')<CR>
 
 "-----------EXCEPTION---------------------
 abbr ùtry try {<CR>}<Left><S-Left><C-R>=Eatchar('\s')<CR>
 abbr ùcat catch () {<CR>}<Up><Right><Right><Right><Right><Right><Right><Right><Right><C-R>=Eatchar('\s')<CR>
 
 abbr ùpst catch ( e) {<CR>e.printStackTrace();<CR>}<Up><Up><Right><Right><Right><Right><Right><Right><Right><Right><C-R>=Eatchar('\s')<CR>
+
+abbr ùeia throw new IllegalArgumentException("");<Left><Left><Left><C-R>=Eatchar('\s')<CR>
+
 
 "---------------------------------------
 "----------SUGAR------------------------
