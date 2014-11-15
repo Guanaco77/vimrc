@@ -145,11 +145,11 @@ abbr ùsouf System.out.printf();<Left><Left><C-R>=Eatchar('\s')<CR>
 abbr ùkb Scanner keyboard = new Scanner(System.in);<CR><C-R>=Eatchar('\s')<CR>
 
 "----------INPUT------------------------
-abbr ùkni = keyboard.nextInt();<CR><C-R>=Eatchar('\s')<CR>
-abbr ùkn = keyboard.next();<CR><C-R>=Eatchar('\s')<CR>
-abbr ùknd = keyboard.nextDouble();<CR><C-R>=Eatchar('\s')<CR>
-abbr ùknl = keyboard.nextLine();<CR><C-R>=Eatchar('\s')<CR>
+abbr ùkn keyboard.next()<C-R>=Eatchar('\s')<CR>
+abbr ùknl keyboard.nextLine()<C-R>=Eatchar('\s')<CR>
 
+abbr ùkni = keyboard.nextInt();<CR><C-R>=Eatchar('\s')<CR>
+abbr ùknd = keyboard.nextDouble();<CR><C-R>=Eatchar('\s')<CR>
 "---------------------------------------
 "----------METHODS AND TYPES------------
 
@@ -186,12 +186,16 @@ abbr ùpsi public static int () {<CR>}<Left><S-Left><Left><Left><Left><C-R>=Eatc
 
 abbr ùpsb public static boolean () {<CR>}<Left><S-Left><Left><Left><Left><C-R>=Eatchar('\s')<CR>
 
+abbr ùpsstr public static String () {<CR>}<Left><S-Left><Left><Left><Left><C-R>=Eatchar('\s')<CR>
+
 "----------NON STATIC PUBLIC METHODS----
 abbr ùpv public void () {<CR>}<Left><S-Left><Left><Left><Left><C-R>=Eatchar('\s')<CR>
 
 abbr ùpi public int () {<CR>}<Left><S-Left><Left><Left><Left><C-R>=Eatchar('\s')<CR>
 
 abbr ùpb public boolean () {<CR>}<Left><S-Left><Left><Left><Left><C-R>=Eatchar('\s')<CR>
+
+abbr ùpstr public String () {<CR>}<Left><S-Left><Left><Left><Left><C-R>=Eatchar('\s')<CR>
 
 
 "---------------------------------------
