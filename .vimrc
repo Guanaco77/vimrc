@@ -96,7 +96,10 @@ set wildmode=longest,list
 
 syntax enable
 set t_Co=256
+let g:solarized_termcolors=256
 set background=dark
+let g:solarized_visibility = "high"
+let g:solarized_contrast = "high"
 colorscheme solarized
 
 "Allows moving between windows with alt+arrow
