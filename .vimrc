@@ -140,6 +140,8 @@ endfunc
 
 "----------IMPORT-----------------------
 abbr ùscanner import java.util.Scanner;<CR><C-R>=Eatchar('\s')<CR>
+"User : Arnaud
+abbr ùutil1 import g40894.util.*;<CR><C-R>=Eatchar('\s')<CR>
 
 "----------PACKAGE---------------------
 "User : Arnaud
