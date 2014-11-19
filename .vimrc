@@ -102,8 +102,7 @@ set wildmode=longest,list
 
 syntax enable
 set t_Co=256
-set background=dark
-colorscheme solarized
+colorscheme monokai
 
 "Allows moving between windows with alt+arrow
 nmap <silent> <A-Up> :wincmd k<CR>
