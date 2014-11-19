@@ -18,6 +18,9 @@ runtime! debian.vim
 set nocompatible
 set backspace=2
 
+" Activate pathogen
+call pathogen#infect()
+
 " Uncomment the next line to make Vim more Vi-compatible
 " NOTE: debian.vim sets 'nocompatible'.  Setting 'compatible' changes numerous
 " options, so any other options should be set AFTER setting 'compatible'.
