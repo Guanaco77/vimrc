@@ -141,6 +141,11 @@ endfunc
 "----------IMPORT-----------------------
 abbr ùscanner import java.util.Scanner;<CR><C-R>=Eatchar('\s')<CR>
 
+"----------PACKAGE---------------------
+"User : Arnaud
+abbr ùpt1 package g40894.tds.td;<Left><C-R>=Eatchar('\s')<CR>
+abbr ùpu1 package g40894.util;<CR><C-R>=Eatchar('\s')<CR>
+
 "--------------------------------------
 "----------I/O-------------------------
 
