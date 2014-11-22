@@ -95,9 +95,6 @@ set wildmenu
 set wildmode=longest,list
 
 syntax enable
-set t_Co=256
-set background=dark
-colorscheme solarized
 
 "Allows moving between windows with alt+arrow
 nmap <silent> <A-Up> :wincmd k<CR>
