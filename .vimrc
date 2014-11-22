@@ -145,6 +145,9 @@ abbr ùsouf System.out.printf();<Left><Left><C-R>=Eatchar('\s')<CR>
 abbr ùkb Scanner keyboard = new Scanner(System.in);<CR><C-R>=Eatchar('\s')<CR>
 
 "----------INPUT------------------------
+abbr ùhn keyboard.hasNext()<C-R>=Eatchar('\s')<CR>
+abbr ùhni keyboard.hasNextInt()<C-R>=Eatchar('\s')<CR>
+
 abbr ùkn keyboard.next()<C-R>=Eatchar('\s')<CR>
 abbr ùknl keyboard.nextLine()<C-R>=Eatchar('\s')<CR>
 
@@ -227,5 +230,3 @@ abbr ùeia throw new IllegalArgumentException("");<Left><Left><Left><C-R>=Eatcha
 
 "---------------------------------------
 "----------SUGAR------------------------
-abbr [ []<C-R>=Eatchar('\s')<CR>
-
