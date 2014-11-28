@@ -181,6 +181,12 @@ abbr ùD Double
 
 abbr ùstr String
 
+abbr ùiar int[]<S-Left><Right><C-R>=Eatchar('\s')<CR>
+abbr ùsar String[]<S-Left><Right><C-R>=Eatchar('\s')<CR>
+
+abbr ùniar = new int[];<S-Left><Right><C-R>=Eatchar('\s')<CR>
+abbr ùnsar = new String[];<S-Left><Right><C-R>=Eatchar('\s')<CR>
+
 
 "----------STATIC PUBLIC METHODS--------
 abbr ùpsv public static void () {<CR>}<Left><S-Left><Left><Left><Left><C-R>=Eatchar('\s')<CR>
