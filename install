@@ -1,0 +1,96 @@
+#!/bin/sh
+
+#This script will guide you through installing the custom
+#vimrc and colorschemes. Note that it will make a backup of your
+#current vimrc (if it exists) file located at $INSTALL_PATH, 
+#named .vimrcBackup
+#It will however erase any colorscheme already named monokai and
+#solarized if they located in $INSTALL_PATH/.vim/colors/
+
+#TODOs :
+#Add restore
+#Add cleanup
+#Clear backup or prompt ?
+
+#DATA
+
+INSTALL_PATH=$HOME
+FILENAME=${INSTALL_PATH}/.vimrc
+BACKUPNAME=${INSTALL_PATH}/.vimrcBackup
+
+CS_SOLARIZED_256="1"
+CS_SOLARIZED="2"
+CS_MONOKAI="3"
+
+#FUNCTIONS
+
+copyFiles () {
+    echo 'Copying vimrc file to install location'
+    cp .vimrc ${FILENAME}
+    echo 'Copying colorschemes to install location'
+    cp -r .vim ${INSTALL_PATH}
+}
+
+appendToVimrcSol256 () {
+    echo 'Appending to vimrc file for solarized 256'
+    echo 'set t_Co=256' >> $FILENAME
+    echo 'let g:solarized_termcolors=256' >> $FILENAME
+    echo 'set background=dark' >> $FILENAME
+    echo 'let g:solarized_visibility = "high"' >> $FILENAME
+    echo 'let g:solarized_contrast = "high"' >> $FILENAME
+    echo 'colorscheme solarized' >> $FILENAME
+}
+
+appendToVimrc () {
+        echo 'Appending to vimrc file for $1'
+        echo 'set background=dark' >> $FILENAME
+        echo 'colorscheme $1' >> $FILENAME
+}
+
+backUp () {
+    echo 'Backing up vimrc'
+    if [ -f $FILENAME]; then
+        cp $FILENAME $BACKUPNAME
+        echo 'Done'
+    else
+        echo 'No vimrc found'
+    fi
+}
+
+restore () {
+    cp $BACKUPNAME $FILENAME
+}
+
+#PROGRAM
+
+echo 'Select your colorscheme :'
+echo '(1) Solarized 256'
+echo '(2) Solarized'
+echo '(3) Monokai'
+echo 'Anything else to abort installation.'
+read CS
+
+case $CS in
+    $CS_SOLARIZED_256)
+        backUp
+        copyFiles
+        appendToVimrcSol256
+        echo 'Done'
+        ;;
+    $CS_SOLARIZED)
+        backUp
+        copyFiles
+        appendToVimrc solarized
+        echo 'Done'
+        ;;
+    $CS_MONOKAI)
+        backUp
+        copyFiles
+        appendToVimrc monokai
+        echo 'Done'
+        ;;
+    *)
+        echo 'Not a valid option'
+        exit 1
+        ;;
+esac
